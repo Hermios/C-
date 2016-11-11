@@ -8,5 +8,7 @@ namespace StandardTools.ServiceLocator
 {
     public interface IServiceLocator
     {
+        void add<T>() where T : IService;
+        IService get<T>() where T : IService;
     }
 }

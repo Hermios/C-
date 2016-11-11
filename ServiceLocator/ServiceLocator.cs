@@ -9,7 +9,7 @@ namespace StandardTools.ServiceLocator
     public class ServiceLocator : IServiceLocator
     {
         private static IServiceLocator _serviceLocator;
-
+        private Dictionary<Type,IService> services;
         private ServiceLocator()
         {
 
@@ -19,6 +19,17 @@ namespace StandardTools.ServiceLocator
             if (_serviceLocator == null)
                 _serviceLocator = new ServiceLocator();
             return _serviceLocator;
+        }
+
+        public void add<T>() where T : IService
+        {
+            if (!services.ContainsKey(typeof(T)))
+                services.Add(typeof(T), (T)Activator.CreateInstance(typeof(T)));
+        }
+
+        public IService get<T>() where T : IService
+        {
+            return (IService)services[typeof(T)];
         }
     }
 }

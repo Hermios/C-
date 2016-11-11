@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StandardTools.ServiceLocator
 {
-    interface IService
+    public interface IService
     {
     }
 }
