@@ -92,6 +92,10 @@
     <Compile Include="ServiceLocator\IService.cs" />
     <Compile Include="ServiceLocator\IServiceLocator.cs" />
     <Compile Include="ServiceLocator\ServiceLocator.cs" />
+    <Compile Include="ServiceMessenger\IMessage.cs" />
+    <Compile Include="ServiceMessenger\ISubscription.cs" />
+    <Compile Include="ServiceMessenger\Messenger.cs" />
+    <Compile Include="ServiceMessenger\Subscription.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
