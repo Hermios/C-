@@ -89,6 +89,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceLocator\IService.cs" />
+    <Compile Include="ServiceLocator\IServiceLocator.cs" />
+    <Compile Include="ServiceLocator\ServiceLocator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
