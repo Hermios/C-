@@ -12,7 +12,7 @@ namespace StandardTools.ServiceLocator
 
         private ServiceLocator() 
         {
-
+        
         }
         public static IServiceLocator getServiceLocator()
         {
