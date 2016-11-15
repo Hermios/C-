@@ -96,6 +96,7 @@
     <Compile Include="ServiceMessenger\ISubscription.cs" />
     <Compile Include="ServiceMessenger\Messenger.cs" />
     <Compile Include="ServiceMessenger\Subscription.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
