@@ -71,6 +71,8 @@
       <HintPath>..\packages\GitHub.0.7.9\lib\net461\GitHub.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
@@ -85,6 +87,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
@@ -96,7 +99,8 @@
     <Compile Include="ServiceMessenger\ISubscription.cs" />
     <Compile Include="ServiceMessenger\Messenger.cs" />
     <Compile Include="ServiceMessenger\Subscription.cs" />
-    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ViewHandler\ViewModelBase.cs" />
+    <Compile Include="ViewHandler\WindowHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
