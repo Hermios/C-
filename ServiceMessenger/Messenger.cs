@@ -33,5 +33,10 @@ namespace StandardTools.ServiceMessenger
                 sub.InvokeMethod(message);
 
         }
+
+        public void initService(params object[] args)
+        {
+            
+        }
     }
 }

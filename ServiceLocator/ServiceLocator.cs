@@ -12,7 +12,7 @@ namespace StandardTools.ServiceLocator
         private Dictionary<Type,IService> services;
         private ServiceLocator()
         {
-
+            services = new Dictionary<Type, IService>();
         }
         public static IServiceLocator getServiceLocator()
         {
@@ -21,15 +21,20 @@ namespace StandardTools.ServiceLocator
             return _serviceLocator;
         }
 
-        public void add<T>() where T : IService
+        public void add<T>(params object[] args) where T : IService
         {
             if (!services.ContainsKey(typeof(T)))
-                services.Add(typeof(T), (T)Activator.CreateInstance(typeof(T)));
+            {
+                T service = (T)Activator.CreateInstance(typeof(T));
+                service.initService(args);
+                services.Add(typeof(T), service);
+                
+            }
         }
 
-        public IService get<T>() where T : IService
+        public T get<T>() where T : IService
         {
-            return (IService)services[typeof(T)];
+            return (T)services[typeof(T)];
         }
     }
 }
