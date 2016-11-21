@@ -31,7 +31,9 @@ namespace GlobalERP.Helpers
 
                 //load parameter
                 string[] paramData = line.Split('=');
-                _params.Add((T)Enum.Parse(typeof(T), paramData[0], true),paramData[1]);
+                T obj;
+                if(Enum.TryParse(paramData[0], out obj))
+                    _params.Add(obj,paramData[1]);
             }
         }
 
