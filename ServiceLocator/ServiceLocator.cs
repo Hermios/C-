@@ -26,7 +26,7 @@ namespace StandardTools.ServiceLocator
             if (!services.ContainsKey(typeof(T)))
             {
                 T service = (T)Activator.CreateInstance(typeof(T));
-                service.initService(args);
+                service.initService(this,args);
                 services.Add(typeof(T), service);
                 
             }

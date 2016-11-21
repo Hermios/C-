@@ -8,6 +8,6 @@ namespace StandardTools.ServiceLocator
 {
     public interface IService
     {
-        void initService(params object[]  args);
+        void initService(IServiceLocator serviceLocator,params object[]  args);
     }
 }

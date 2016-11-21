@@ -34,9 +34,8 @@ namespace StandardTools.ServiceMessenger
 
         }
 
-        public void initService(params object[] args)
+        public void initService(IServiceLocator serviceLocator, params object[] args)
         {
-            
         }
     }
 }
